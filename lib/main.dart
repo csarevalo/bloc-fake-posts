@@ -5,7 +5,7 @@ import 'src/app.dart';
 import 'src/posts/bloc/post_bloc_observer.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized(); //not needed
   Bloc.observer = const PostBlocObserver();
   runApp(const App());
 }
