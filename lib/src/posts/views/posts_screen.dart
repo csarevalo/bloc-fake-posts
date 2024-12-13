@@ -12,14 +12,16 @@ class PostsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Post Discussion'),
-        centerTitle: true,
-      ),
-      body: BlocProvider(
-        create: (_) => PostBloc(),
-        child: const PostsList(),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Post Discussion'),
+          centerTitle: true,
+        ),
+        body: BlocProvider(
+          create: (_) => PostBloc(),
+          child: const PostsList(),
+        ),
       ),
     );
   }
